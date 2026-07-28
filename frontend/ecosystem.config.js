@@ -20,7 +20,7 @@ module.exports = {
       'post-deploy': [
         'cd frontend',
         'npm ci',
-        'NODE_OPTIONS=--openssl-legacy-provider npm run build',
+        'npm run build',
       ].join(' && '),
     },
   },

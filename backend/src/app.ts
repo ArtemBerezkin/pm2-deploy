@@ -17,14 +17,18 @@ const allowedOrigins = [
   'http://artem-mesto.nomoreparties.nomorepartiessite.ru',
   'https://artem-mesto.nomoreparties.nomorepartiessite.ru',
   'http://51.250.16.114',
+  'http://localhost:3000',
 ];
 
-app.use(cors({
+const corsOptions = {
   origin: allowedOrigins,
   credentials: true,
-  methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE', 'OPTIONS'],
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
-}));
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());

@@ -1,6 +1,6 @@
 # Mesto
 
-IP адрес 51.250.16.114
+http://51.250.16.114
 
 Frontend https://artem-mesto.nomoreparties.nomorepartiessite.ru
 
